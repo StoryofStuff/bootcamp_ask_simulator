@@ -22,5 +22,6 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'capybara'
+  gem 'factory_girl_rails'
 end
 
