@@ -68,8 +68,13 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     ffi (1.9.10)
     formatador (0.2.5)
+    foundation-rails (5.4.5.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     guard (2.12.8)
@@ -231,6 +236,8 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   erb2haml
   factory_girl_rails
+  faker
+  foundation-rails
   guard
   guard-rspec
   haml-rails

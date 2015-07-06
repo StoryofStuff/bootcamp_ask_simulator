@@ -7,6 +7,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'foundation-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -23,5 +24,6 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'faker'
 end
 
