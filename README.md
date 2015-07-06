@@ -4,7 +4,7 @@ This is an ask simulator that allows people to ask questions and get answers (so
 
 ## Models
 
-Questions
----------
+#### Questions
+
 Questions start out as a simple text field associated with a user. (Or, in the future, they might be able to be texted in!). Upon submission they are reviewed and assigned an answer.
 
