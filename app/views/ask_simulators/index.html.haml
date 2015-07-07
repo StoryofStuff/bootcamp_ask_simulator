@@ -1,18 +1,19 @@
-.row
-  .small-12.medium-6.columns
-    %h1.text-center Ask Simulator
-    .phone
-      .messages
-        =render @questions
-      #compose-box
-        =form_for @question do |form|
-          .row.collapse
-            .small-9.columns
-              =form.text_field :text
-            .small-3.columns
-              =form.submit "Send", class: "button small"
-  .small-12.medium-6.columns
-    #instructions
+.section-paper{ style: "padding-bottom: 100px;" }
+  .row
+    .small-12.medium-6.columns
+      %h1.text-center Ask Simulator
+      .phone
+        .messages
+          =render @questions
+        #compose-box
+          =form_for @question do |form|
+            .row.collapse
+              .small-9.columns
+                =form.text_field :text
+              .small-3.columns
+                =form.submit "Send", class: "button small"
+        #home-button
+    .small-12.medium-6.columns
       %h1 Instructions
-      .panel.callout.radius
+      #instructions.panel.radius
         !=get_instructions(@questions.last)

@@ -7,6 +7,7 @@
 }
 .phone
 {
+  background: #fff;
   padding: 60px 5px 50px 5px;
   width: 300px;
   max-width: 100%;
@@ -65,6 +66,17 @@
       padding: 5px;
       background: #eee;
       color: #2095FE;
+      text-shadow: none;
+      box-shadow: none;
     }
+  }
+  #home-button
+  {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
   }
 }
