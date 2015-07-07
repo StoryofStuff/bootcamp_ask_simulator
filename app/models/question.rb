@@ -14,6 +14,6 @@ class Question < ActiveRecord::Base
     self.answer = Answer.order("RANDOM()").first
 
     #maybe in the future this is where we deliver the answer via text?
+    #TextAnswer.new().queue_delivery
   end
-
 end
