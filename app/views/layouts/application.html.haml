@@ -7,4 +7,7 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
+    -flash.each do |name, message|
+      %div{ class: "alert-box #{name}", data: {alert: ""} }
+        =message
     = yield

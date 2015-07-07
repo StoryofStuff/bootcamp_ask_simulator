@@ -4,13 +4,13 @@ class QuestionsController < ApplicationController
     if question.save
       redirect_to root_path
     else
-      redirect_to root_path, flash: "Error"
+      redirect_to root_path, flash: { warning: "A question is required" }
     end
   end
 
   private
   
   def question_params
-    params.require(:question).permit(:text)
+    params.require(:question).permit(:text).merge(session_id: request.session_options[:id])
   end
 end

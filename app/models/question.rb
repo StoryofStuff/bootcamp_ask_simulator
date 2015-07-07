@@ -1,5 +1,6 @@
 class Question < ActiveRecord::Base
   default_scope { order('created_at asc') }
+  scope :by_session, ->(session_id) { where session_id: session_id }
 
   validates :text, presence: true
 
@@ -8,7 +9,8 @@ class Question < ActiveRecord::Base
   private
 
   def assign_answer
-    answers = ["Totally. That sounds great.",
+    answers = [ 
+                "Totally. That sounds great.",
                 "You betcha.",
                 "!!!!!",
                 "Affirmative.",

@@ -1,6 +1,6 @@
 class AskSimulatorsController < ApplicationController
   def index
     @question = Question.new
-    @questions = Question.all
+    @questions = Question.by_session request.session_options[:id]
   end
 end
