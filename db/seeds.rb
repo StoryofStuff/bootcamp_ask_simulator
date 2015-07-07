@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+AnswerType.create(short_answer: "yes")
+AnswerType.create(short_answer: "no")
+AnswerType.create(short_answer: "maybe")
+answers = [ 
+                "Totally. That sounds great.",
+                "You betcha.",
+                "!!!!!",
+                "Affirmative.",
+                "Of course.",
+                "All signs point to yes.",
+                "You can count on me.",
+                "Yep. Happy to help.",
+                ": )"
+              ]
+answers.each do |answer|
+  Answer.create(answer_type_id: AnswerType.first, content: answer)
+end
