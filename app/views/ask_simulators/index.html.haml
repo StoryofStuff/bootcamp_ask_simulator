@@ -1,4 +1,11 @@
-=form_for @question do |form|
-  =form.text_field :text
-  =form.submit "Ask"
-=render @questions
+%h1.text-center No Simulator
+.phone
+  .messages
+    =render @questions
+  #compose-box
+    =form_for @question do |form|
+      .row.collapse
+        .small-9.columns
+          =form.text_field :text
+        .small-3.columns
+          =form.submit "Send", class: "button small"
