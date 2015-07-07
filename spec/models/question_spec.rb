@@ -8,7 +8,7 @@ RSpec.describe Question, :type => :model do
     expect(FactoryGirl.build(:question, text: '')).to be_invalid
   end
   it "assigns an answer after being saved" do
-    FactoryGirl.create(:answer)
-    expect(FactoryGirl.create(:question).answer).not_to be_nil
+    answer = FactoryGirl.create(:answer)
+    expect(FactoryGirl.create(:question).answer).to eq(answer)
   end
 end

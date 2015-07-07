@@ -11,19 +11,7 @@ class Question < ActiveRecord::Base
   private
 
   def assign_answer
-=begin    answers = [ 
-                "Totally. That sounds great.",
-                "You betcha.",
-                "!!!!!",
-                "Affirmative.",
-                "Of course.",
-                "All signs point to yes.",
-                "You can count on me.",
-                "Yep. Happy to help.",
-                ": )"
-              ]
-=end
-    self.answer = Answer.first
+    self.answer = Answer.order("RANDOM()").first
 
     #maybe in the future this is where we deliver the answer via text?
   end

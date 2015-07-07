@@ -2,11 +2,12 @@ require 'rails_helper'
 
 feature "User asks a question" do
   scenario "successfully" do
+    Answer.create!(content: "Yes!")
     visit root_path
     fill_in :question_text, with: "Will you marry me?"
     click_on 'Send'
     expect(page).to have_css('.question', text: "Will you marry me?")
-    expect(page).to have_css('.answer')
+    expect(page).to have_css('.answer', text: "Yes!")
   end
   scenario "unsuccessfully" do
     visit root_path
