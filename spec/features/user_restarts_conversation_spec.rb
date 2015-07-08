@@ -10,7 +10,7 @@ feature "User restarts the conversation" do
     click_on 'Send'
     click_on 'Start Over'
 
-    expect(page).to_not have_css('.question')
+    expect(page).to_not have_css('.message')
 
   end
 end
