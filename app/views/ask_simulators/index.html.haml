@@ -17,3 +17,5 @@
       %h1 Instructions
       #instructions.panel.radius
         !=get_instructions(@questions.last)
+      -unless(@questions.empty?)
+        =link_to "Start Over", ask_simulator_path, class: "button dark-blue cta", method: :delete
