@@ -1,0 +1,82 @@
+html, html a
+{
+  -webkit-font-smoothing:antialiased;     /* FONT SMOOTHING */
+}
+body
+{
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size:18px;
+  line-height: 30px;
+}
+a
+{
+  color: inherit;
+  text-decoration: underline;
+  &:hover
+  {
+    color:inherit;
+  }
+}
+h1, h2, h3, h4, h5, h6
+{
+  font-family: 'Arvo', serif;
+  font-weight: lighter;
+  text-decoration: none;
+  &:first-child
+  {
+    padding-top:0;
+    margin-top: 0;
+  }
+}
+hr
+{
+  border-top: 2px dashed rgba(0,0,0,.2);
+}
+.cta
+{
+  font-family: 'League Spartan';
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  a
+  {
+    text-decoration: none;
+  }
+}
+.ak-labels-overlaid
+{
+  label
+  {
+    padding-left: 10px;
+      font-size: 1.2rem;
+  }
+}
+label
+{
+  font-size: 1rem;
+}
+blockquote
+{
+  border-left: none;
+  padding-top: 20px;
+  padding-left: 60px;
+  p
+  {
+    color: #333;
+  } 
+}
+blockquote::before
+{
+  content: open-quote;
+  font-size: 7rem;
+  color: #333;
+  position: relative;
+  height: 0px;
+  width: 0px;
+  display: block;
+  top:-50px;
+  left: -60px;
+  font-family:'League Spartan', serif;
+}

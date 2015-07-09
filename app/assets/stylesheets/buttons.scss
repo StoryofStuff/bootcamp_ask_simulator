@@ -1,0 +1,63 @@
+button, .button
+{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  font-family:'Open Sans',sans-serif;
+  font-weight: normal;
+  font-size:1.2em;
+  text-shadow: 1px 2px rgba(0,0,0,.3);
+  &.red
+  {
+    background-color: #C51C14;
+  }
+  &.cta
+  {
+    padding-top:14px;
+    font-family:'League Spartan',sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 5px 0px;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  &.dark-blue
+  {
+    background: #167C90;
+    color: #FFE6AB;
+  }
+  &.yellow
+  {
+    background: #FECC58;
+    color: #C12652;
+    text-shadow: none;
+  }
+  i.fa
+  {
+    margin: 0px 5px;
+  }
+  &.clear
+  {
+      background-color: transparent;
+      color: #FFF;
+      border: 2px solid #FFF !important;
+      text-shadow: none;
+  }
+  &.clear:hover
+  {
+    color: #FFE6AB;
+    border: 2px solid #FFE6AB !important;
+  }
+  &.full
+  {
+    width: 100%;
+  }
+  &:active, .active
+  {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12) inset, 0 1px 2px rgba(0,0,0,0.24) inset;
+    outline: none;
+  }
+  &:focus
+  {
+    outline: none;
+  }
+}
