@@ -72,12 +72,7 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
-    fast_stack (0.1.0)
-      rake
-      rake-compiler
     ffi (1.9.10)
-    flamegraph (0.1.0)
-      fast_stack
     formatador (0.2.5)
     foundation-rails (5.4.5.0)
       railties (>= 3.1.0)
@@ -179,8 +174,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
-    rake-compiler (0.9.5)
-      rake
     rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -254,7 +247,6 @@ DEPENDENCIES
   erb2haml
   factory_girl_rails
   faker
-  flamegraph
   foundation-rails
   guard
   guard-rspec
