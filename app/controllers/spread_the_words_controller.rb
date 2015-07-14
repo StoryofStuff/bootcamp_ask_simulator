@@ -1,5 +1,6 @@
 class SpreadTheWordsController < ApplicationController
   def new
+    @spread_the_word = SpreadTheWord.new
     @prefills = StwPrefill.all
   end
 

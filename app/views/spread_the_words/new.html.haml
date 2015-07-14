@@ -11,6 +11,7 @@
       %p
         What do you want to spread the word about?
       .choices
-        =render @prefills
+        =form_for @spread_the_word, url: spread_the_word_path, method: :post do |form|
+          =collection_select(:spread_the_word, :prefill, @prefills, :id, :title)
 
       =link_to "Get Started", spread_the_word_path, method: :post

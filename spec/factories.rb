@@ -1,4 +1,7 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :spread_the_word do
+    
+  end
+
 
   factory :answer do
     content "MyString"
