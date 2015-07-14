@@ -1,6 +1,5 @@
-FactoryGirl.define do  factory :stw_prefill do
-    
-  end
+FactoryGirl.define do
+
   factory :answer do
     content "MyString"
     answer_type_id 1
@@ -13,6 +12,15 @@ FactoryGirl.define do  factory :stw_prefill do
   factory :question do
     text { Faker::Lorem.sentence(3) << '?' }
     session_id { Faker::Number.hexadecimal(32) }
+  end
+
+  factory :stw_prefill do
+    title { Faker::Lorem.sentence(4) }
+    url   { 'http://google.com' }
+    why_it_matters_to_me { Faker::Lorem.sentence(10) }
+    what_it_is { Faker::Lorem.sentence(10) }
+    why_it_matters_to_them { Faker::Lorem.sentence(10) }
+    what_im_asking_them_to_do { Faker::Lorem.sentence(10) }
   end
 
 end

@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature "User asks a question" do
   scenario "successfully" do
-    answer_type = AnswerType.create(short_answer: "yes")
-    answer = Answer.create(content: "Yes!", answer_type_id: answer_type.id)
+    answer_type = FactoryGirl.create(:answer_type, short_answer: "yes")
+    answer = FactoryGirl.create(:answer, content: "Yes!", answer_type_id: answer_type.id)
     
     visit ask_simulator_path
     fill_in :question_text, with: "Will you marry me?"

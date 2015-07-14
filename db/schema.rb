@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150707022651) do
+ActiveRecord::Schema.define(version: 20150714185829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,17 @@ ActiveRecord::Schema.define(version: 20150707022651) do
     t.datetime "updated_at", null: false
     t.string   "session_id"
     t.integer  "answer_id"
+  end
+
+  create_table "stw_prefills", force: :cascade do |t|
+    t.string   "title"
+    t.string   "url"
+    t.string   "why_it_matters_to_me"
+    t.string   "what_it_is"
+    t.string   "why_it_matters_to_them"
+    t.string   "what_im_asking_them_to_do"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end
