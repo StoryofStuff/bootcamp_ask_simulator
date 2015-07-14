@@ -9,7 +9,6 @@ class SpreadTheWordsController < ApplicationController
   end
 
   def create
-    puts params
     @spread_the_word = SpreadTheWord.create(spread_the_word_params)
     redirect_to action: :show
   end
