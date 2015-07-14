@@ -1,4 +1,7 @@
-FactoryGirl.define do  factory :answer do
+FactoryGirl.define do  factory :stw_prefill do
+    
+  end
+  factory :answer do
     content "MyString"
     answer_type_id 1
   end
