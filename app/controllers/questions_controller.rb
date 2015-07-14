@@ -2,9 +2,9 @@ class QuestionsController < ApplicationController
   def create
     question = Question.create(question_params)
     if question.save
-      redirect_to root_path
+      redirect_to ask_simulator_path
     else
-      redirect_to root_path, flash: { warning: "A question is required" }
+      redirect_to ask_simulator_path, flash: { warning: "A question is required" }
     end
   end
 
