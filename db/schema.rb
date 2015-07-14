@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150714185829) do
+ActiveRecord::Schema.define(version: 20150714202310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,22 @@ ActiveRecord::Schema.define(version: 20150714185829) do
     t.string   "session_id"
     t.integer  "answer_id"
   end
+
+  create_table "spread_the_words", force: :cascade do |t|
+    t.string   "session_id"
+    t.string   "url"
+    t.string   "why_it_matters_to_me"
+    t.string   "what_it_is"
+    t.string   "why_it_matters_to_them"
+    t.string   "what_im_asking_them_to_do"
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "spread_the_words", ["recipient_id"], name: "index_spread_the_words_on_recipient_id", using: :btree
+  add_index "spread_the_words", ["sender_id"], name: "index_spread_the_words_on_sender_id", using: :btree
 
   create_table "stw_prefills", force: :cascade do |t|
     t.string   "title"
