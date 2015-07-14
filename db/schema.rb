@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150714202310) do
+ActiveRecord::Schema.define(version: 20150714204100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,8 +48,10 @@ ActiveRecord::Schema.define(version: 20150714202310) do
     t.integer  "recipient_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "prefill_id"
   end
 
+  add_index "spread_the_words", ["prefill_id"], name: "index_spread_the_words_on_prefill_id", using: :btree
   add_index "spread_the_words", ["recipient_id"], name: "index_spread_the_words_on_recipient_id", using: :btree
   add_index "spread_the_words", ["sender_id"], name: "index_spread_the_words_on_sender_id", using: :btree
 
