@@ -41,5 +41,12 @@ maybe_answers.each do |answer|
   Answer.create(answer_type_id: maybe_type.id, content: answer)
 end
 
+StwPrefill.create(title: "SoS Prefill", 
+                  url: 'http://storyofstuff.org', 
+                  why_it_matters_to_me: 'For a while now, I’ve been troubled by the volume of stuff in my life.',
+                  what_it_is: 'This movie puts so much of what I’ve been thinking about into an animated explanation that connects the dots between the environmental and social issues we face and our deep problem Stuff.',
+                  why_it_matters_to_them: 'I know you’ve been on quite the mission to take control of your stuff lately and I thought you might get something out of the movie.',
+                  what_im_asking_them_to_do: 'Will you take 20 minutes this week to watch The Story of Stuff?')
+
 
 

@@ -1,0 +1,10 @@
+.section-paper
+  .row
+    .small-12.medium-6.columns
+      %h1 Finish The Ask
+      .panel
+        =form_for @spread_the_word do |form|
+          =form.text_area "why_it_matters_to_me", value: @spread_the_word.why_it_matters_to_me
+          =form.text_area "what_it_is", value: @spread_the_word.what_it_is
+          =form.text_area "why_it_matters_to_them", value: @spread_the_word.why_it_matters_to_them
+          =form.text_area "what_im_asking_them_to_do", value: @spread_the_word.what_im_asking_them_to_do

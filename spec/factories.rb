@@ -1,4 +1,7 @@
-FactoryGirl.define do  factory :spread_the_word do
+FactoryGirl.define do  factory :user do
+    
+  end
+  factory :spread_the_word do
     
   end
 

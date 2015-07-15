@@ -10,7 +10,11 @@ class SpreadTheWordsController < ApplicationController
 
   def create
     @spread_the_word = SpreadTheWord.create(spread_the_word_params)
-    redirect_to action: :show
+    redirect_to action: :edit
+  end
+
+  def edit
+    @spread_the_word = SpreadTheWord.by_session(request.session_options[:id]).first
   end
 
   private
