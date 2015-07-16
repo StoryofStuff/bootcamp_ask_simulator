@@ -1,10 +1,29 @@
 .section-paper
-  .row
-    .small-12.medium-6.columns
-      %h1 Finish The Ask
-      .panel
-        =form_for @spread_the_word do |form|
-          =form.text_area "why_it_matters_to_me", value: @spread_the_word.why_it_matters_to_me
-          =form.text_area "what_it_is", value: @spread_the_word.what_it_is
-          =form.text_area "why_it_matters_to_them", value: @spread_the_word.why_it_matters_to_them
-          =form.text_area "what_im_asking_them_to_do", value: @spread_the_word.what_im_asking_them_to_do
+  =form_for @spread_the_word do |form|
+
+    .row
+      .small-12.medium-6.columns
+        %h1.text-center Spread the Word
+        .panel.radius
+          %h3 Pick an Audience
+          =form.label :to_user, "Send To Email"
+          =text_field :to_user, :email
+        .panel.radius
+          %h3 Explain the Signifigance
+          =form.label :why_it_matters_to_me, "Why it matters to you"
+          =form.text_area :why_it_matters_to_me, value: @spread_the_word.why_it_matters_to_me
+          =form.label :what_it_is, "What it is"
+          =form.text_area :what_it_is, value: @spread_the_word.what_it_is
+          =form.label :why_it_matters_to_them, "Why it matters to them"
+          =form.text_area :why_it_matters_to_them, value: @spread_the_word.why_it_matters_to_them
+        .panel.radius
+          %h3 Make an Ask
+          =form.label :what_im_asking_them_to_do, "What you're asking them to do"
+          =form.text_area :what_im_asking_them_to_do, value: @spread_the_word.what_im_asking_them_to_do
+
+      .small-12.medium-6.columns
+        %h1.text-center Email Preview
+        .panel.white.letter
+          #letter
+            {{ letter }}
+        =form.submit 'Send Email', class: "button red cta"
